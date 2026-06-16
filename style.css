@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #1c1c1c 0%, #000 100%);
+    border-bottom: 4px solid #ff5a00; /* Laranja McLaren */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header span {
+    color: #ff5a00;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Conteúdo Principal */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.grid-curiosidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Cards de Curiosidades */
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ff5a00;
+    box-shadow: 0 10px 20px rgba(255, 90, 0, 0.2);
+}
+
+.card-numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgba(255, 90, 0, 0.15);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-numero {
+    color: rgba(255, 90, 0, 0.6);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    color: #ff5a00;
+    margin-bottom: 0.8rem;
+    padding-right: 2rem;
+}
+
+.card p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #0a0a0a;
+    color: #666;
+    margin-top: 4rem;
+    border-top: 1px solid #222;
+    font-size: 0.9rem;
+}
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
